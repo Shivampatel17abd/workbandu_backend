@@ -14,11 +14,22 @@ const userSchema = new mongoose.Schema({
     type: String, 
     required: true 
 },
+
+phoneNumber:{
+ type:Number,
+ length:10,
+ required:true
+},
   role: { 
     type: String, 
     enum: ["jobseeker", "employer", "freelancer"], 
     required: true 
 },
+isServiceProvoder:{
+    type:Boolean,
+    default:false
+},
+
   bio: String,
   skills: [String],
   location: String,
